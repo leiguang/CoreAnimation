@@ -8,26 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9A1463DA205F4D0B00C589FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463D9205F4D0B00C589FD /* AppDelegate.swift */; };
-		9A1463DC205F4D0B00C589FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463DB205F4D0B00C589FD /* ViewController.swift */; };
-		9A1463DF205F4D0B00C589FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1463DD205F4D0B00C589FD /* Main.storyboard */; };
 		9A1463E1205F4D0B00C589FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1463E0205F4D0B00C589FD /* Assets.xcassets */; };
 		9A1463E4205F4D0B00C589FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1463E2205F4D0B00C589FD /* LaunchScreen.storyboard */; };
 		9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463EB205F4DDE00C589FD /* Introduction.swift */; };
 		9A1463EE205F8E4A00C589FD /* CoreAnimationBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463ED205F8E4A00C589FD /* CoreAnimationBasics.swift */; };
 		9A1463F0205F8E8B00C589FD /* SettingUpLayerObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463EF205F8E8B00C589FD /* SettingUpLayerObjects.swift */; };
+		9A1463F2206099D800C589FD /* AnimatingLayerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */; };
+		9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F320609A1D00C589FD /* TableViewController.swift */; };
+		9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */; };
+		9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A1463D6205F4D0B00C589FD /* CoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1463D9205F4D0B00C589FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A1463DB205F4D0B00C589FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A1463DE205F4D0B00C589FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A1463E0205F4D0B00C589FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A1463E3205F4D0B00C589FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A1463E5205F4D0B00C589FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A1463EB205F4DDE00C589FD /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
 		9A1463ED205F8E4A00C589FD /* CoreAnimationBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationBasics.swift; sourceTree = "<group>"; };
 		9A1463EF205F8E8B00C589FD /* SettingUpLayerObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUpLayerObjects.swift; sourceTree = "<group>"; };
+		9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingLayerContentViewController.swift; sourceTree = "<group>"; };
+		9A1463F320609A1D00C589FD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingALayerHierarchy.swift; sourceTree = "<group>"; };
+		9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				9A1463D9205F4D0B00C589FD /* AppDelegate.swift */,
-				9A1463DB205F4D0B00C589FD /* ViewController.swift */,
+				9A1463F320609A1D00C589FD /* TableViewController.swift */,
 				9A1463EB205F4DDE00C589FD /* Introduction.swift */,
 				9A1463ED205F8E4A00C589FD /* CoreAnimationBasics.swift */,
 				9A1463EF205F8E8B00C589FD /* SettingUpLayerObjects.swift */,
-				9A1463DD205F4D0B00C589FD /* Main.storyboard */,
+				9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */,
+				9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */,
+				9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController.swift */,
 				9A1463E0205F4D0B00C589FD /* Assets.xcassets */,
 				9A1463E2205F4D0B00C589FD /* LaunchScreen.storyboard */,
 				9A1463E5205F4D0B00C589FD /* Info.plist */,
@@ -134,7 +140,6 @@
 			files = (
 				9A1463E4205F4D0B00C589FD /* LaunchScreen.storyboard in Resources */,
 				9A1463E1205F4D0B00C589FD /* Assets.xcassets in Resources */,
-				9A1463DF205F4D0B00C589FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A1463DC205F4D0B00C589FD /* ViewController.swift in Sources */,
+				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
+				9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */,
+				9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController.swift in Sources */,
 				9A1463F0205F8E8B00C589FD /* SettingUpLayerObjects.swift in Sources */,
+				9A1463F2206099D800C589FD /* AnimatingLayerContentViewController.swift in Sources */,
 				9A1463EE205F8E4A00C589FD /* CoreAnimationBasics.swift in Sources */,
 				9A1463DA205F4D0B00C589FD /* AppDelegate.swift in Sources */,
 			);
@@ -156,14 +164,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9A1463DD205F4D0B00C589FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A1463DE205F4D0B00C589FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A1463E2205F4D0B00C589FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -223,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -274,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
