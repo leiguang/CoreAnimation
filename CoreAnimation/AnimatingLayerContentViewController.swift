@@ -8,6 +8,7 @@
 
 
 // [Animating Layer Content]
+// notes在本页底部
 
 import UIKit
 
@@ -16,18 +17,12 @@ class AnimatingLayerContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fadeAnim_implicity()    // 隐式动画 消失opacity=0
+        fadeAnim_explicitly()   // 显示动画 消失opacity=0
+        pathAnim()  // 路径动画 弹跳小球
+        groupAnim() // 动画组 改变边框颜色和大小
+        viewAnim()  // 使用UIView接口 结合CoreAnimation做动画，改变矩形颜色和位置
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        fadeAnim_implicity()
-        fadeAnim_explicitly()
-        pathAnim()
-        groupAnim()
-        viewAnim()
-    }
-
     
     // MARK: - 隐式动画 (Animating a change implicitly)
     func fadeAnim_implicity() {
@@ -65,7 +60,7 @@ class AnimatingLayerContentViewController: UIViewController {
     
     // MARK: - 弹跳小球 (Using a Keyframe Animation to Change Layer Properties)
     func pathAnim() {
-        // 紫色圆球 (两种创建方式，效果一样)
+        // 紫色圆球 (用两种方式创建，效果一样)
         // 1. 使用CAShapeLayer + UIBezierPath 创建圆球
         let path = UIBezierPath(arcCenter: CGPoint(x: 25, y: 25), radius: 25, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         let layer = CAShapeLayer()

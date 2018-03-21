@@ -16,7 +16,9 @@
 		9A1463F2206099D800C589FD /* AnimatingLayerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */; };
 		9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F320609A1D00C589FD /* TableViewController.swift */; };
 		9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */; };
-		9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController.swift */; };
+		9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */; };
+		9A46AAF7206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */; };
+		9A46AAF9206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,9 @@
 		9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingLayerContentViewController.swift; sourceTree = "<group>"; };
 		9A1463F320609A1D00C589FD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingALayerHierarchy.swift; sourceTree = "<group>"; };
-		9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController.swift; sourceTree = "<group>"; };
+		9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CATransition.swift; sourceTree = "<group>"; };
+		9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CAMediaTiming.swift; sourceTree = "<group>"; };
+		9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CATransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,9 @@
 				9A1463EF205F8E8B00C589FD /* SettingUpLayerObjects.swift */,
 				9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */,
 				9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */,
-				9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController.swift */,
+				9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */,
+				9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */,
+				9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */,
 				9A1463E0205F4D0B00C589FD /* Assets.xcassets */,
 				9A1463E2205F4D0B00C589FD /* LaunchScreen.storyboard */,
 				9A1463E5205F4D0B00C589FD /* Info.plist */,
@@ -152,9 +158,11 @@
 			files = (
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
+				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift in Sources */,
 				9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */,
-				9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController.swift in Sources */,
+				9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift in Sources */,
 				9A1463F0205F8E8B00C589FD /* SettingUpLayerObjects.swift in Sources */,
+				9A46AAF7206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift in Sources */,
 				9A1463F2206099D800C589FD /* AnimatingLayerContentViewController.swift in Sources */,
 				9A1463EE205F8E4A00C589FD /* CoreAnimationBasics.swift in Sources */,
 				9A1463DA205F4D0B00C589FD /* AppDelegate.swift in Sources */,

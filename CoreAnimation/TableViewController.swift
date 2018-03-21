@@ -12,7 +12,9 @@ class TableViewController: UITableViewController {
 
     let datas =  [
         ["text": "Animating Layer Content", "className": "AnimatingLayerContentViewController"],
-        ["text": "Advanced Animation Tricks", "className": "AdvancedAnimationTricksViewController"],
+        ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricksViewController_CATransition"],
+        ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricksViewController_CAMediaTiming"],
+        ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricksViewController_CATransaction"],
     ]
     
     override func viewDidLoad() {

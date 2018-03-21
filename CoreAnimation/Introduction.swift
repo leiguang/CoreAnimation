@@ -10,9 +10,20 @@
 // MARK: Introduction
 
 /**
+层级关系：
+    UIKit / AppKit
+    Core Animation
+  Metal   Core Graphics
+    Graphics Hardware
+ 
+ 
  
  Core Animation将大部分实际的绘图工作交给板载图形硬件来加速渲染。 这种自动图形加速可实现高帧率和流畅的动画效果，而不会增加CPU的负担并减慢应用程序的运行速度。
  All you have to do is configure a few animation parameters (such as the start and end points) and tell Core Animation to start. Core Animation does the rest, handing most of the actual drawing work off to the onboard graphics hardware to accelerate the rendering. This automatic graphics acceleration results in high frame rates and smooth animations without burdening the CPU and slowing down your app.
+ 
+ 
+ 如果您正在编写iOS应用程序，则无论您是否知道，都已经有使用到Core Animation了。 如果您正在编写OS X应用程序，则可以非常轻松地利用Core Animation。 Core Animation位于AppKit和UIKit之下，并紧密集成到Cocoa和Cocoa Touch的视图工作流中。 当然，Core Animation也具有接口，可以扩展应用视图所显示的功能，并可以更好地控制应用的动画。
+ If you are writing iOS apps, you are using Core Animation whether you know it or not. And if you are writing OS X apps, you can take advantage of Core Animation with extremely little effort. Core Animation sits beneath AppKit and UIKit and is integrated tightly into the view workflows of Cocoa and Cocoa Touch. Of course, Core Animation also has interfaces that extend the capabilities exposed by your app’s views and give you more fine-grained control over your app’s animations.
  
  
  核心动画本身不是一个绘图系统。 它是用于在硬件中合成和操纵应用内容的基础设施。 这个基础架构的核心是图层对象，您可以使用它来管理和操作您的内容。 图层将您的内容捕获到位图中，该位图可由图形硬件轻松操纵。 在大多数应用程序中，图层用作管理视图内容的方式，但您也可以根据需要创建独立图层。
