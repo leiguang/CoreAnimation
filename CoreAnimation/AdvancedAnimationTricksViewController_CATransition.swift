@@ -116,7 +116,7 @@ class AdvancedAnimationTricksViewController_CATransition: UIViewController {
             
             v1.layer.add(transition, forKey: nil)
             
-            v1.isHidden = true
+//            v1.isHidden = true    // 添加此句可观察moveIn不同的效果
         }
     }
     
@@ -155,10 +155,9 @@ class AdvancedAnimationTricksViewController_CATransition: UIViewController {
             transition.type = kCATransitionPush
             transition.subtype = kCATransitionFromLeft
             transition.duration = 1.0
-            
             v1.layer.add(transition, forKey: nil)
             
-            v1.isHidden = true  // 可注释此句观察push本身的效果
+//            v1.isHidden = true  // 添加此句可观察push不同的效果
             /**
              经试验发现 type=kCATransitionPush, subtype=kCATransitionFromLeft时, 过渡前后v1的isHidden属性不同 则效果不同
                 1.不隐藏->隐藏： 从v1的原点起，向右推出，淡出效果；
@@ -207,7 +206,7 @@ class AdvancedAnimationTricksViewController_CATransition: UIViewController {
             
             v1.layer.add(transition, forKey: nil)
             
-            v1.isHidden = true  // 可注释此句观察reveal本身的效果
+//            v1.isHidden = true  // 添加此句观察reveal不同的的效果
         }
     }
     

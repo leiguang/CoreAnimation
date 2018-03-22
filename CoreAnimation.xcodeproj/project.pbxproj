@@ -19,6 +19,7 @@
 		9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */; };
 		9A46AAF7206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */; };
 		9A46AAF9206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */; };
+		9A46AB312063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CATransition.swift; sourceTree = "<group>"; };
 		9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CAMediaTiming.swift; sourceTree = "<group>"; };
 		9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CATransaction.swift; sourceTree = "<group>"; };
+		9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingALayerDefaultBehaviorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */,
 				9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */,
 				9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */,
+				9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */,
 				9A1463E0205F4D0B00C589FD /* Assets.xcassets */,
 				9A1463E2205F4D0B00C589FD /* LaunchScreen.storyboard */,
 				9A1463E5205F4D0B00C589FD /* Info.plist */,
@@ -159,6 +162,7 @@
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
 				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift in Sources */,
+				9A46AB312063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift in Sources */,
 				9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */,
 				9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift in Sources */,
 				9A1463F0205F8E8B00C589FD /* SettingUpLayerObjects.swift in Sources */,
@@ -295,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y83DYJ394;
 				INFOPLIST_FILE = CoreAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leiguang.CoreAnimation;
@@ -309,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y83DYJ394;
 				INFOPLIST_FILE = CoreAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leiguang.CoreAnimation;

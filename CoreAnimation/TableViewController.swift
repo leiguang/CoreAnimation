@@ -15,6 +15,7 @@ class TableViewController: UITableViewController {
         ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricksViewController_CATransition"],
         ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricksViewController_CAMediaTiming"],
         ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricksViewController_CATransaction"],
+        ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehaviorViewController"]
     ]
     
     override func viewDidLoad() {

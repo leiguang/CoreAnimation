@@ -33,25 +33,25 @@
  您可以在要为不同的动画集提供不同默认值的情况下嵌套事务。要将一个事务嵌套到另一个事务中，只需再次调用begin类方法即可。每次开始调用都必须通过对commit方法的相应调用进行匹配。只有在您为最外层事务提交更改后，Core Animation才会开始关联的动画。
  You can nest transactions in situations where you want to provide different default values for different sets of animations. To nest one transaction inside of another, just call the begin class method again. Each begin call must be matched by a corresponding call to the commit method. Only after you commit the changes for the outermost transaction does Core Animation begin the associated animations.
 
+ 
+ 在事务期间，您可以临时获取用于管理属性原子性的递归旋转锁。
+ During a transaction you can temporarily acquire a recursive spin lock for managing property atomicity.
+ 
  */
 
 import UIKit
 
 class AdvancedAnimationTricksViewController_CATransaction: UIViewController {
-
-    let completionBlock = {
-        print("completion")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        changingDuration()  // 改变默认动画时间
+        explicitTransactions()          // transaction用法示例
+        nestedExplicitTransactions()    // 嵌套的transaction
     }
 
-    // Changing the default duration of animations
-    func changingDuration() {
+    // MARK: - Creating an explicit transaction
+    func explicitTransactions() {
         let layer1 = CALayer()
         layer1.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
         layer1.position = CGPoint(x: 60, y: 150)
@@ -59,29 +59,29 @@ class AdvancedAnimationTricksViewController_CATransaction: UIViewController {
         view.layer.addSublayer(layer1)
         
         let layer2 = CALayer()
-        layer2.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+        layer2.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
         layer2.position = CGPoint(x: 180, y: 150)
         layer2.backgroundColor = UIColor.red.cgColor
         view.layer.addSublayer(layer2)
         
         let layer3 = CALayer()
-        layer3.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+        layer3.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
         layer3.position = CGPoint(x: 300, y: 150)
         layer3.backgroundColor = UIColor.red.cgColor
         view.layer.addSublayer(layer3)
         
         let layer4 = CALayer()
-        layer4.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
-        layer4.position = CGPoint(x: 250, y: 300)
-        layer4.backgroundColor = UIColor.red.cgColor
-//        view.layer.addSublayer(layer4)
+        layer4.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
+        layer4.position = CGPoint(x: 60, y: 300)
+        layer4.backgroundColor = UIColor.green.cgColor
+        view.layer.addSublayer(layer4)
         
   
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
 
             // 1.禁用动画效果
             CATransaction.begin()
-            CATransaction.setValue(true, forKey: kCATransactionDisableActions)
+            CATransaction.setDisableActions(true)   // 相当于CATransaction.setValue(true, forKey: kCATransactionDisableActions)
             layer1.opacity = 0
             CATransaction.commit()
 
@@ -91,24 +91,66 @@ class AdvancedAnimationTricksViewController_CATransaction: UIViewController {
 
 
             // 3.把default animation duration改为 3s
+            // 4.设置动画完成后的回调函数
             CATransaction.begin()
-            CATransaction.setValue(self.completionBlock, forKey: kCATransactionCompletionBlock)
-            CATransaction.setValue(3, forKey: kCATransactionAnimationDuration)
+            CATransaction.setAnimationDuration(3)   // 相当于CATransaction.setValue(3, forKey: kCATransactionAnimationDuration)
+            CATransaction.setCompletionBlock({      // 相当于kCATransactionCompletionBlock
+                print("completion")
+            })
             layer3.opacity = 0
             CATransaction.commit()
 
-            // 4.设置动画完成后的回调函数
-//            let completionBlock = {
-//                print("completion")
-//            }
-//            completionBlock()
-//            CATransaction.begin()
-//            CATransaction.setValue(completionBlock, forKey: kCATransactionCompletionBlock)
-//            layer4.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
-//            CATransaction.commit()
-
-
-            // 5.
+            
+            // 5.设置动画的时间函数
+            // CAMediaTimingFunction效果查看器 [Tween-o-Matic](https://github.com/simonwhitaker/tween-o-matic)
+            CATransaction.begin()
+            CATransaction.setAnimationDuration(2)
+            let timingFunction = CAMediaTimingFunction(controlPoints: 0, 0.9, 0.1, 1)
+            CATransaction.setAnimationTimingFunction(timingFunction)    // 相当于kCATransactionAnimationTimingFunction
+            layer4.position = CGPoint(x: 300, y: 300)
+            CATransaction.commit()
+            
         }
+    }
+    
+    // MARK: - Nesting explicit transactions
+    func nestedExplicitTransactions() {
+        let layer = CALayer()
+        layer.bounds = CGRect(x: 0, y: 0, width: 80, height: 80)
+        layer.position = CGPoint(x: 60, y: 400)
+        layer.backgroundColor = UIColor.blue.cgColor
+        view.layer.addSublayer(layer)
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+        
+            // 如果多线程中需要的话，可以使用CATransaction提供的递归自旋锁来保证属性的原子性 (Attempts to acquire a recursive spin-lock lock, ensuring that returned layer values are valid until unlocked.)
+            CATransaction.lock()
+            
+            CATransaction.begin()
+            CATransaction.setAnimationDuration(2.0)
+            layer.position = CGPoint(x: 300, y: 400)
+            
+                // Inner transaction
+                CATransaction.begin()
+                CATransaction.setAnimationDuration(5.0)
+                layer.zPosition = 200.0
+                layer.opacity = 0
+                CATransaction.commit()
+            
+            CATransaction.commit()
+            
+            CATransaction.unlock()
+        }
+        
+        
+        /** [Adding Perspective to Your Animations]
+         // Adding a perspective transform to a parent layer
+         var perspective = CATransform3DIdentity
+         perspective.m34 = -1.0 / 1000
+         
+         // Apply the transform to a parent layer.
+         view.layer.sublayerTransform = perspective
+        */
     }
 }
