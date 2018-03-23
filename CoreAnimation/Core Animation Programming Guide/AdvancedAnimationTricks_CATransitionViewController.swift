@@ -1,5 +1,5 @@
 //
-//  AdvancedAnimationTricksViewController_CATransition.swift
+//  AdvancedAnimationTricks_CATransitionViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/20.
@@ -31,7 +31,7 @@
 
 import UIKit
 
-class AdvancedAnimationTricksViewController_CATransition: UIViewController {
+class AdvancedAnimationTricks_CATransitionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  AdvancedAnimationTricksViewController_CAMediaTiming.swift
+//  AdvancedAnimationTricks_CAMediaTimingViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/21.
@@ -12,6 +12,7 @@
 // (本页关于控制动画时间)
 
 // >> 参考 [CoreAnimation动画时间控制](http://blog.csdn.net/u013282174/article/details/51605403#begintime)
+// >> [关于贝塞尔曲线的公式和表现形式](http://en.wikipedia.org/wiki/Bezier_curve)
 
 /**
  CAMediaTiming协议:
@@ -56,7 +57,7 @@
 
 import UIKit
 
-class AdvancedAnimationTricksViewController_CAMediaTiming: UIViewController {
+class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
 
     let redLayer = CALayer()
     let colorLayer = CALayer()

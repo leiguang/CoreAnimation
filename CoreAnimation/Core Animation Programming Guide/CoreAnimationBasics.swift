@@ -29,7 +29,7 @@
  During the course of an animation, Core Animation does all of the frame-by-frame drawing for you in hardware.
  
  
- 基于点坐标(point-based)的最常见用途是指定图层的大小和位置，您可以使用图层的边界(bounds)和位置(position)属性进行确定。 bounds定义了图层本身的坐标系，并包含了图层在屏幕上的大小。 position属性定义了图层相对于其父坐标系的位置。 尽管图层具有frame属性，但该属性实际上是从bounds和position属性中的值导出的，并且使用频率较低。
+ 基于点坐标(point-based)的最常见用途是指定图层的大小和位置，您可以使用图层的边界(bounds)和位置(position)属性进行确定。 bounds定义了图层本身的坐标系，并包含了图层在屏幕上的大小。 position属性定义了图层相对于其父坐标系的位置。 尽管图层具有frame属性，但该属性实际上是从bounds和position属性中的值导出的，并且使用频率较低。(注意 frame: computed from the bounds and position and is not animatable)
  Among the most common uses for point-based coordinates is to specify the size and position of the layer, which you do using the layer’s bounds and position properties. The bounds defines the coordinate system of the layer itself and encompasses the layer’s size on the screen. The position property defines the location of the layer relative to its parent’s coordinate system. Although layers have a frame property, that property is actually derived from the values in the bounds and position properties and is used less frequently.
  
  

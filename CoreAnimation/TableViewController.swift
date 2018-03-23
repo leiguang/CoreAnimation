@@ -12,10 +12,11 @@ class TableViewController: UITableViewController {
 
     let datas =  [
         ["text": "Animating Layer Content", "className": "AnimatingLayerContentViewController"],
-        ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricksViewController_CATransition"],
-        ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricksViewController_CAMediaTiming"],
-        ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricksViewController_CATransaction"],
-        ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehaviorViewController"]
+        ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricks_CATransitionViewController"],
+        ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricks_CAMediaTimingViewController"],
+        ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricks_CATransactionViewController"],
+        ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehaviorViewController"],
+        ["text": "CAShapeLayer", "className": "CAShapeLayerViewController"],
     ]
     
     override func viewDidLoad() {

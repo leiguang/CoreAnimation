@@ -16,10 +16,14 @@
 		9A1463F2206099D800C589FD /* AnimatingLayerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */; };
 		9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F320609A1D00C589FD /* TableViewController.swift */; };
 		9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */; };
-		9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */; };
-		9A46AAF7206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */; };
-		9A46AAF9206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */; };
+		9A1463FA206109ED00C589FD /* AdvancedAnimationTricks_CATransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1463F9206109ED00C589FD /* AdvancedAnimationTricks_CATransitionViewController.swift */; };
+		9A46AAF7206228FB002A3041 /* AdvancedAnimationTricks_CAMediaTimingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF6206228FB002A3041 /* AdvancedAnimationTricks_CAMediaTimingViewController.swift */; };
+		9A46AAF9206260AE002A3041 /* AdvancedAnimationTricks_CATransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AAF8206260AE002A3041 /* AdvancedAnimationTricks_CATransactionViewController.swift */; };
 		9A46AB312063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */; };
+		9A46AB3520648E57002A3041 /* ImprovingAnimationPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3420648E57002A3041 /* ImprovingAnimationPerformance.swift */; };
+		9A46AB3720649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3620649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift */; };
+		9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */; };
+		9A46AB3F2064FB70002A3041 /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3E2064FB70002A3041 /* CAShapeLayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +38,14 @@
 		9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingLayerContentViewController.swift; sourceTree = "<group>"; };
 		9A1463F320609A1D00C589FD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingALayerHierarchy.swift; sourceTree = "<group>"; };
-		9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CATransition.swift; sourceTree = "<group>"; };
-		9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CAMediaTiming.swift; sourceTree = "<group>"; };
-		9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricksViewController_CATransaction.swift; sourceTree = "<group>"; };
+		9A1463F9206109ED00C589FD /* AdvancedAnimationTricks_CATransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricks_CATransitionViewController.swift; sourceTree = "<group>"; };
+		9A46AAF6206228FB002A3041 /* AdvancedAnimationTricks_CAMediaTimingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricks_CAMediaTimingViewController.swift; sourceTree = "<group>"; };
+		9A46AAF8206260AE002A3041 /* AdvancedAnimationTricks_CATransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationTricks_CATransactionViewController.swift; sourceTree = "<group>"; };
 		9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingALayerDefaultBehaviorViewController.swift; sourceTree = "<group>"; };
+		9A46AB3420648E57002A3041 /* ImprovingAnimationPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovingAnimationPerformance.swift; sourceTree = "<group>"; };
+		9A46AB3620649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendixA_LayerStylePropertyAnimations.swift; sourceTree = "<group>"; };
+		9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendixB_AnimatableProperties.swift; sourceTree = "<group>"; };
+		9A46AB3E2064FB70002A3041 /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,20 +80,40 @@
 			children = (
 				9A1463D9205F4D0B00C589FD /* AppDelegate.swift */,
 				9A1463F320609A1D00C589FD /* TableViewController.swift */,
-				9A1463EB205F4DDE00C589FD /* Introduction.swift */,
-				9A1463ED205F8E4A00C589FD /* CoreAnimationBasics.swift */,
-				9A1463EF205F8E8B00C589FD /* SettingUpLayerObjects.swift */,
-				9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */,
-				9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */,
-				9A1463F9206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift */,
-				9A46AAF6206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift */,
-				9A46AAF8206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift */,
-				9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */,
+				9A46AB3D2064EF9A002A3041 /* Core Animation Programming Guide */,
+				9A46AB3C2064EF88002A3041 /* Demo */,
 				9A1463E0205F4D0B00C589FD /* Assets.xcassets */,
 				9A1463E2205F4D0B00C589FD /* LaunchScreen.storyboard */,
 				9A1463E5205F4D0B00C589FD /* Info.plist */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		9A46AB3C2064EF88002A3041 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				9A46AB3E2064FB70002A3041 /* CAShapeLayerViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		9A46AB3D2064EF9A002A3041 /* Core Animation Programming Guide */ = {
+			isa = PBXGroup;
+			children = (
+				9A1463EB205F4DDE00C589FD /* Introduction.swift */,
+				9A1463ED205F8E4A00C589FD /* CoreAnimationBasics.swift */,
+				9A1463EF205F8E8B00C589FD /* SettingUpLayerObjects.swift */,
+				9A1463F1206099D800C589FD /* AnimatingLayerContentViewController.swift */,
+				9A1463F7206101DA00C589FD /* BuildingALayerHierarchy.swift */,
+				9A1463F9206109ED00C589FD /* AdvancedAnimationTricks_CATransitionViewController.swift */,
+				9A46AAF6206228FB002A3041 /* AdvancedAnimationTricks_CAMediaTimingViewController.swift */,
+				9A46AAF8206260AE002A3041 /* AdvancedAnimationTricks_CATransactionViewController.swift */,
+				9A46AB302063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift */,
+				9A46AB3420648E57002A3041 /* ImprovingAnimationPerformance.swift */,
+				9A46AB3620649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift */,
+				9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */,
+			);
+			path = "Core Animation Programming Guide";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,16 +188,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
+				9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
-				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricksViewController_CATransaction.swift in Sources */,
+				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricks_CATransactionViewController.swift in Sources */,
 				9A46AB312063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift in Sources */,
 				9A1463F8206101DA00C589FD /* BuildingALayerHierarchy.swift in Sources */,
-				9A1463FA206109ED00C589FD /* AdvancedAnimationTricksViewController_CATransition.swift in Sources */,
+				9A1463FA206109ED00C589FD /* AdvancedAnimationTricks_CATransitionViewController.swift in Sources */,
 				9A1463F0205F8E8B00C589FD /* SettingUpLayerObjects.swift in Sources */,
-				9A46AAF7206228FB002A3041 /* AdvancedAnimationTricksViewController_CAMediaTiming.swift in Sources */,
+				9A46AB3F2064FB70002A3041 /* CAShapeLayerViewController.swift in Sources */,
+				9A46AAF7206228FB002A3041 /* AdvancedAnimationTricks_CAMediaTimingViewController.swift in Sources */,
 				9A1463F2206099D800C589FD /* AnimatingLayerContentViewController.swift in Sources */,
 				9A1463EE205F8E4A00C589FD /* CoreAnimationBasics.swift in Sources */,
 				9A1463DA205F4D0B00C589FD /* AppDelegate.swift in Sources */,
+				9A46AB3520648E57002A3041 /* ImprovingAnimationPerformance.swift in Sources */,
+				9A46AB3720649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

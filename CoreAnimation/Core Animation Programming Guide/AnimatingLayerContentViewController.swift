@@ -18,7 +18,7 @@ class AnimatingLayerContentViewController: UIViewController {
         super.viewDidLoad()
         
         fadeAnim_implicity()    // 隐式动画 消失opacity=0
-        fadeAnim_explicitly()   // 显示动画 消失opacity=0
+        fadeAnim_explicitly()   // 显式动画 消失opacity=0
         pathAnim()  // 路径动画 弹跳小球
         groupAnim() // 动画组 改变边框颜色和大小
         viewAnim()  // 使用UIView接口 结合CoreAnimation做动画，改变矩形颜色和位置
@@ -38,7 +38,7 @@ class AnimatingLayerContentViewController: UIViewController {
         }
     }
     
-    // MARK: - 显示动画 (Animating a change explicitly)
+    // MARK: - 显式动画 (Animating a change explicitly)
     func fadeAnim_explicitly() {
         let layer = CALayer()
         layer.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -46,16 +46,18 @@ class AnimatingLayerContentViewController: UIViewController {
         layer.backgroundColor = UIColor.green.cgColor
         view.layer.addSublayer(layer)
         
-        // Animating a change explicitly
-        let fadeAnim = CABasicAnimation(keyPath: "opacity")
-        fadeAnim.fromValue = 1.0
-        fadeAnim.toValue = 0.0
-        fadeAnim.duration = 1.0
-        layer.add(fadeAnim, forKey: "opacity")    // 这个key也可以填nil，在移除指定动画方法removeAnimation(forKey: )的时候需要用到这个key。 (The special key kCATransition is automatically used for transition animations. You may specify nil for this parameter.)
-        
-        // 显示动画不会修改model layer的值。如果不加这句，动画结束后会还原到opacity = 1.0的初始状态 (Unlike an implicit animation, which updates the layer object’s data value, an explicit animation does not modify the data in the layer tree. Explicit animations only produce the animations. )
-        // Change the actual data value in the layer to the final value.
-        layer.opacity = 0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            // Animating a change explicitly
+            let fadeAnim = CABasicAnimation(keyPath: "opacity")
+            fadeAnim.fromValue = 1.0
+            fadeAnim.toValue = 0.0
+            fadeAnim.duration = 1.0
+            layer.add(fadeAnim, forKey: "opacity")    // 这个key也可以填nil，在移除指定动画方法removeAnimation(forKey: )的时候需要用到这个key。 (The special key kCATransition is automatically used for transition animations. You may specify nil for this parameter.)
+            
+            // 显式动画不会修改model layer的值。如果不加这句，动画结束后会还原到opacity = 1.0的初始状态 (Unlike an implicit animation, which updates the layer object’s data value, an explicit animation does not modify the data in the layer tree. Explicit animations only produce the animations. )
+            // Change the actual data value in the layer to the final value.
+            layer.opacity = 0
+        }
     }
     
     // MARK: - 弹跳小球 (Using a Keyframe Animation to Change Layer Properties)
