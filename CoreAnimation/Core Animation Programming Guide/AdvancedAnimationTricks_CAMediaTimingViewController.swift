@@ -67,6 +67,9 @@ class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
 
         startOrStopAnim()   // 开始/暂停 动画
         changeColorAnim()   // 手动控制动画颜色
+        
+        beginTime()
+        timeOffset()
     }
 
     // MARK: - 开始/暂停 动画
@@ -89,6 +92,7 @@ class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
         anim.duration = 2
         anim.autoreverses = true
         anim.repeatCount = Float.greatestFiniteMagnitude
+        
         redLayer.add(anim, forKey: nil)
     }
     
@@ -101,11 +105,15 @@ class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
             let timeSincePause = redLayer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
             redLayer.beginTime = timeSincePause
             
+            print(timeSincePause)
+            
         } else {            // 暂停动画
             let pausedTime = redLayer.convertTime(CACurrentMediaTime(), from: nil)
             redLayer.speed = 0.0
             redLayer.timeOffset = pausedTime
         }
+        
+        // 我还没有理解对这段代码每一步的含义，参考自苹果文档：[Core Animation Programming Guide -> Advanced Animation Tricks -> Pausing and Resuming Animations](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/AdvancedAnimationTricks/AdvancedAnimationTricks.html#//apple_ref/doc/uid/TP40004514-CH8-SW1)
     }
     
     
@@ -132,6 +140,41 @@ class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
 
     @objc func tapSlider(_ sender: UISlider) {
         colorLayer.timeOffset = Double(sender.value * 1.0)  // slider.value * 动画duration.   (注：timeOffset/duration 表示动画进行的百分比)
+    }
+    
+    // MARK: - beginTime (观察beginTime属性)
+    func beginTime() {
+        let layer = CALayer()
+        layer.frame = CGRect(x: 50, y: 500, width: 100, height: 100)
+        layer.backgroundColor = UIColor.green.cgColor
+        view.layer.addSublayer(layer)
+        
+        let anim = CABasicAnimation(keyPath: "bounds")
+        anim.fromValue = CGRect(x: 0, y: 0, width: 100, height: 100)
+        anim.toValue = CGRect(x: 0, y: 0, width: 50, height: 50)
+        anim.duration = 3.0
+        anim.beginTime = 2.0    // 发现beginTime只有放在CAAnimationGroup中才有效，否则就不做动画了.... 对这几个属性以及时间的转换还不太理解
+        
+        let group = CAAnimationGroup()
+        group.animations = [anim]
+        group.duration = 5.0    // anim.duration + anim.beginTime
+        layer.add(group, forKey: nil)
+    }
+    
+    // MARK: - timeOffset (观察timeOffset属性)
+    func timeOffset() {
+        let layer = CALayer()
+        layer.frame = CGRect(x: 200, y: 500, width: 100, height: 100)
+        layer.backgroundColor = UIColor.green.cgColor
+        view.layer.addSublayer(layer)
+        
+        let anim = CABasicAnimation(keyPath: "bounds")
+        anim.fromValue = CGRect(x: 0, y: 0, width: 100, height: 100)
+        anim.toValue = CGRect(x: 0, y: 0, width: 50, height: 50)
+        anim.duration = 3.0
+        anim.timeOffset = 2.0
+
+        layer.add(anim, forKey: nil)
     }
 }
 
