@@ -14,8 +14,9 @@ class CAShapeLayerViewController: UIViewController {
         super.viewDidLoad()
 
         flower()
-        line()
-        circle()
+        lineProgress()
+        gradientLineProgress()
+        gradientCircleProgress()
         
     }
 
@@ -53,20 +54,20 @@ class CAShapeLayerViewController: UIViewController {
         shapeLayer.add(anim, forKey: "path")
     }
     
-    
-    func line() {
+    // 直线进度条
+    func lineProgress() {
         let shapeLayer = CAShapeLayer()
         shapeLayer.frame = CGRect(x: 50, y: 450, width: 200, height: 20)
-        
+
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 0, y: 10))
         path.addLine(to: CGPoint(x: 200, y: 10))
-        
+
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 20
         shapeLayer.strokeColor = UIColor.red.cgColor
         view.layer.addSublayer(shapeLayer)
-        
+
         let anim = CABasicAnimation(keyPath: "strokeEnd")
         anim.duration = 3.0
         anim.fromValue = 0.0
@@ -74,12 +75,44 @@ class CAShapeLayerViewController: UIViewController {
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         shapeLayer.add(anim, forKey: nil)
     }
+    
+    // 渐变直线进度条
+    func gradientLineProgress() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 50, y: 500, width: 200, height: 20)
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        view.layer.addSublayer(gradientLayer)
+
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = CGRect(x: 0, y: 0, width: 200, height: 20)
+
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0, y: 10))
+        path.addLine(to: CGPoint(x: 200, y: 10))
+
+        shapeLayer.path = path.cgPath
+        shapeLayer.lineWidth = 20
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        view.layer.addSublayer(shapeLayer)
+
+        let anim = CABasicAnimation(keyPath: "strokeEnd")
+        anim.duration = 3.0
+        anim.fromValue = 0.0
+        anim.toValue = 1.0
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        shapeLayer.add(anim, forKey: nil)
+
+        gradientLayer.mask = shapeLayer
+    }
    
-    func circle() {
+    // 弧形渐变进度条
+    func gradientCircleProgress() {
         
-        // 渐变层
+        // 渐变层 (由于iOS没有直接提供按路径渐变的方法，因此左右放两个渐变颜色相反的layer来达到圆形渐变的效果)
         let gradientLayer = CALayer()
-        gradientLayer.frame = CGRect(x: 50, y: 500, width: 100, height: 100)
+        gradientLayer.frame = CGRect(x: 50, y: 550, width: 100, height: 100)
         view.layer.addSublayer(gradientLayer)
         
         let leftGradientLayer = CAGradientLayer()
@@ -97,20 +130,21 @@ class CAShapeLayerViewController: UIViewController {
         gradientLayer.addSublayer(rightGradientLayer)
         
         // border
-        
         let borderLayer = CAShapeLayer()
         borderLayer.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        
+        // 通过画圆的角度来控制进度条的进度
+        // 这里 + 0.15是因为 lineCap = kCALineCapRound为圆形，所以初始值会看到渐变层的左半部分，因此将绘制起点像右偏移一点点（值0.15是我随意设置的，满足效果就行了）
         let borderPath = UIBezierPath(arcCenter: CGPoint(x: 50, y: 50), radius: 45, startAngle: -CGFloat.pi / 2 + 0.15, endAngle: CGFloat.pi * 3 / 2 + 0.15 , clockwise: true)
         borderLayer.path = borderPath.cgPath
-        borderLayer.strokeColor = UIColor.black.cgColor
-        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = UIColor.black.cgColor // 边框不透明
+        borderLayer.fillColor = UIColor.clear.cgColor   // 中间透明
         borderLayer.lineWidth = 10
         borderLayer.lineCap = kCALineCapRound
-        //
+        
+        // 把border layer设置为 gradient layer的mask(遮住什么就显示什么)，border layer中间透明而边框不透明，因此可以看到gradient layer中的边框部分
         gradientLayer.mask = borderLayer
         
-        // 边框动画
+        // border动画
         let anim = CABasicAnimation(keyPath: "strokeEnd")
         anim.duration = 3.0
         anim.fromValue = 0.0
@@ -118,9 +152,9 @@ class CAShapeLayerViewController: UIViewController {
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         borderLayer.add(anim, forKey: nil)
         
-        // 中间层
+        // 中间内容（yellow）
         let contentLayer = CAShapeLayer()
-        contentLayer.frame = CGRect(x: 50, y: 500, width: 100, height: 100)
+        contentLayer.frame = CGRect(x: 50, y: 550, width: 100, height: 100)
         view.layer.addSublayer(gradientLayer)
         let contentPath = UIBezierPath(arcCenter: CGPoint(x: 50, y: 50), radius: 40, startAngle: 0, endAngle: CGFloat.pi * 2 , clockwise: true)
         contentLayer.path = contentPath.cgPath

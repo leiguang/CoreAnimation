@@ -50,7 +50,7 @@
  If you are using the same image in multiple layer objects, load the image yourself and assign it directly to the contents property of those layer objects. Assigning an image to the contents property prevents the layer from allocating memory for a backing store. Instead, the layer uses the image you provide as its backing store. When several layers use the same image, this means that all of those layers are sharing the same memory rather than allocating a copy of the image for themselves.
  
 
- 4.始终将图层大小设置为积分值
+ 4.始终将图层大小设置为整数值
  为获得最佳效果，请始终将图层对象的宽度和高度设置为整数值。 虽然使用浮点数指定图层边界的宽度和高度，但最终将使用图层边界来创建位图图像。 指定宽度和高度的整数值简化了Core Animation必须执行的工作，以创建和管理后备存储和其他图层信息。
  Always Set a Layer’s Size to Integral Values
  For best results, always set the width and height of your layer objects to integral values. Although you specify the width and height of your layer’s bounds using floating-point numbers, the layer bounds are ultimately used to create a bitmap image. Specifying integral values for the width and height simplifies the work that Core Animation must do to create and manage the backing store and other layer information.
