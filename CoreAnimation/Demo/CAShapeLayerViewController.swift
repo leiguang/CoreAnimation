@@ -17,7 +17,6 @@ class CAShapeLayerViewController: UIViewController {
         lineProgress()
         gradientLineProgress()
         gradientCircleProgress()
-        
     }
 
     // Creating a stylized flower with a shape layer
@@ -76,7 +75,7 @@ class CAShapeLayerViewController: UIViewController {
         shapeLayer.add(anim, forKey: nil)
     }
     
-    // 渐变直线进度条
+    // 渐变直线进度条 (重点在于使用mask属性)
     func gradientLineProgress() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 50, y: 500, width: 200, height: 20)

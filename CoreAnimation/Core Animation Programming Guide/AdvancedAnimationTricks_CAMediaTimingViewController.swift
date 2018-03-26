@@ -114,6 +114,7 @@ class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
         }
         
         // 我还没有理解对这段代码每一步的含义，参考自苹果文档：[Core Animation Programming Guide -> Advanced Animation Tricks -> Pausing and Resuming Animations](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/AdvancedAnimationTricks/AdvancedAnimationTricks.html#//apple_ref/doc/uid/TP40004514-CH8-SW1)
+        // 另外可参考文章 (https://blog.csdn.net/xiaolinyeyi/article/details/51736907)
     }
     
     
@@ -153,12 +154,8 @@ class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
         anim.fromValue = CGRect(x: 0, y: 0, width: 100, height: 100)
         anim.toValue = CGRect(x: 0, y: 0, width: 50, height: 50)
         anim.duration = 3.0
-        anim.beginTime = 2.0    // 发现beginTime只有放在CAAnimationGroup中才有效，否则就不做动画了.... 对这几个属性以及时间的转换还不太理解
-        
-        let group = CAAnimationGroup()
-        group.animations = [anim]
-        group.duration = 5.0    // anim.duration + anim.beginTime
-        layer.add(group, forKey: nil)
+        anim.beginTime = layer.convertTime(CACurrentMediaTime(), from: nil) + 1.0   // // 或者放进CAAnimationGroup中，直接设为1
+        layer.add(anim, forKey: nil)
     }
     
     // MARK: - timeOffset (观察timeOffset属性)

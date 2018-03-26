@@ -24,6 +24,7 @@
 		9A46AB3720649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3620649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift */; };
 		9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */; };
 		9A46AB3F2064FB70002A3041 /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3E2064FB70002A3041 /* CAShapeLayerViewController.swift */; };
+		9A71719C2069398D004D9269 /* CASpringAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71719B2069398D004D9269 /* CASpringAnimationViewController.swift */; };
 		9A9C16E82068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		9A46AB3620649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendixA_LayerStylePropertyAnimations.swift; sourceTree = "<group>"; };
 		9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendixB_AnimatableProperties.swift; sourceTree = "<group>"; };
 		9A46AB3E2064FB70002A3041 /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
+		9A71719B2069398D004D9269 /* CASpringAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASpringAnimationViewController.swift; sourceTree = "<group>"; };
 		9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTypesAndTimingProgrammingGuide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9A46AB3E2064FB70002A3041 /* CAShapeLayerViewController.swift */,
+				9A71719B2069398D004D9269 /* CASpringAnimationViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */,
+				9A71719C2069398D004D9269 /* CASpringAnimationViewController.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
 				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricks_CATransactionViewController.swift in Sources */,
 				9A46AB312063AC4E002A3041 /* ChangingALayerDefaultBehaviorViewController.swift in Sources */,

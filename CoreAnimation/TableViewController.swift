@@ -17,6 +17,7 @@ class TableViewController: UITableViewController {
         ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricks_CATransactionViewController"],
         ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehaviorViewController"],
         ["text": "CAShapeLayer", "className": "CAShapeLayerViewController"],
+        ["text": "CASpringAnimation", "className": "CASpringAnimationViewController"],
     ]
     
     override func viewDidLoad() {
