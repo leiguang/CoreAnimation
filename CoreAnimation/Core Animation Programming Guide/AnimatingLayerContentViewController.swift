@@ -108,6 +108,7 @@ class AnimatingLayerContentViewController: UIViewController {
         let layer = CALayer()
         layer.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
         layer.position = CGPoint(x: 100, y: 500)
+        layer.backgroundColor = UIColor.green.cgColor
         view.layer.addSublayer(layer)
         
         // Animation 1
