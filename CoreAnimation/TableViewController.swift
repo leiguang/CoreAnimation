@@ -22,6 +22,7 @@ class TableViewController: UITableViewController {
         ["text": "CAEmitterLayer", "className": "CAEmitterLayer_ViewController"],
         ["text": "CAScrollLayer", "className": "CAScrollLayer_ViewController"],
         ["text": "CATiledLayer", "className": "CATiledLayer_ViewController"],
+        ["text": "CATransformLayer", "className": "CATransformLayer_ViewController"],
     ]
     
     override func viewDidLoad() {

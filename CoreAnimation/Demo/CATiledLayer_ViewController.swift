@@ -29,6 +29,16 @@
  Do not attempt to directly modify the contents property of a CATiledLayer object. Doing so disables the ability of a tiled layer to asynchronously provide tiled content, effectively turning the layer into a regular CALayer object.
  */
 
+
+/**
+ 
+ 用于大尺寸图片的加载（将大图切割成一块块小图，异步多次调用绘制代码，绘制单个小图到画布对应的位置上）。
+    具体用法，可参考
+    1.苹果提供的demo [PhotoScroller](https://developer.apple.com/library/content/samplecode/PhotoScroller/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010080-Intro-DontLinkElementID_2)或直接在https://developer.apple.com中搜索“CATiledlayer sample code”
+    2.[仿百度地图加载地图模式/CATiledLayer](https://blog.csdn.net/tx874828503/article/details/51179101)
+ 
+ */
+
 import UIKit
 
 class CATiledLayer_ViewController: UIViewController {

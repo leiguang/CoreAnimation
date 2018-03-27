@@ -30,6 +30,7 @@
 		9A71719C2069398D004D9269 /* CASpringAnimation_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71719B2069398D004D9269 /* CASpringAnimation_ViewController.swift */; };
 		9A9C16E82068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */; };
 		9A9FE6FF206A43EA0026B682 /* CATiledLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */; };
+		9AB8AAEA206A94CB00678869 /* CATransformLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		9A71719B2069398D004D9269 /* CASpringAnimation_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASpringAnimation_ViewController.swift; sourceTree = "<group>"; };
 		9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTypesAndTimingProgrammingGuide.swift; sourceTree = "<group>"; };
 		9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATiledLayer_ViewController.swift; sourceTree = "<group>"; };
+		9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransformLayer_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9A22DCA22069EA4A00BE7FE3 /* CAEmitterLayer_ViewController.swift */,
 				9A22DCA4206A2EA700BE7FE3 /* CAScrollLayer_ViewController.swift */,
 				9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */,
+				9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				9A46AAF7206228FB002A3041 /* AdvancedAnimationTricks_CAMediaTiming_ViewController.swift in Sources */,
 				9A1463F2206099D800C589FD /* AnimatingLayerContent_ViewController.swift in Sources */,
 				9A1463EE205F8E4A00C589FD /* CoreAnimationBasics.swift in Sources */,
+				9AB8AAEA206A94CB00678869 /* CATransformLayer_ViewController.swift in Sources */,
 				9A1463DA205F4D0B00C589FD /* AppDelegate.swift in Sources */,
 				9A46AB3520648E57002A3041 /* ImprovingAnimationPerformance.swift in Sources */,
 				9A46AB3720649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift in Sources */,
