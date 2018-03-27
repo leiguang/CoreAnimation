@@ -1,5 +1,5 @@
 //
-//  AdvancedAnimationTricks_CAMediaTimingViewController.swift
+//  AdvancedAnimationTricks_CAMediaTiming_ViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/21.
@@ -57,7 +57,7 @@
 
 import UIKit
 
-class AdvancedAnimationTricks_CAMediaTimingViewController: UIViewController {
+class AdvancedAnimationTricks_CAMediaTiming_ViewController: UIViewController {
 
     let redLayer = CALayer()
     let colorLayer = CALayer()

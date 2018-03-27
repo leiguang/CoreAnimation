@@ -11,13 +11,17 @@ import UIKit
 class TableViewController: UITableViewController {
 
     let datas =  [
-        ["text": "Animating Layer Content", "className": "AnimatingLayerContentViewController"],
-        ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricks_CATransitionViewController"],
-        ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricks_CAMediaTimingViewController"],
-        ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricks_CATransactionViewController"],
-        ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehaviorViewController"],
-        ["text": "CAShapeLayer", "className": "CAShapeLayerViewController"],
-        ["text": "CASpringAnimation", "className": "CASpringAnimationViewController"],
+        ["text": "Animating Layer Content", "className": "AnimatingLayerContent_ViewController"],
+        ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricks_CATransition_ViewController"],
+        ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricks_CAMediaTiming_ViewController"],
+        ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricks_CATransaction_ViewController"],
+        ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehavior_ViewController"],
+        ["text": "CAShapeLayer", "className": "CAShapeLayer_ViewController"],
+        ["text": "CASpringAnimation", "className": "CASpringAnimation_ViewController"],
+        ["text": "CADisplayLink", "className": "CADisplayLink_ViewController"],
+        ["text": "CAEmitterLayer", "className": "CAEmitterLayer_ViewController"],
+        ["text": "CAScrollLayer", "className": "CAScrollLayer_ViewController"],
+        ["text": "CATiledLayer", "className": "CATiledLayer_ViewController"],
     ]
     
     override func viewDidLoad() {

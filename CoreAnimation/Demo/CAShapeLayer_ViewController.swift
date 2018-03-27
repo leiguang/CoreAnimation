@@ -1,5 +1,5 @@
 //
-//  CAShapeLayerViewController.swift
+//  CAShapeLayer_ViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/23.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CAShapeLayerViewController: UIViewController {
+class CAShapeLayer_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

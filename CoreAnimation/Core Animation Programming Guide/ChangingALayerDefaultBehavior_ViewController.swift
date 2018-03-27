@@ -1,5 +1,5 @@
 //
-//  ChangingALayerDefaultBehaviorViewController.swift
+//  ChangingALayerDefaultBehavior_ViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/22.
@@ -11,7 +11,7 @@
 
 import UIKit
 
-class ChangingALayerDefaultBehaviorViewController: UIViewController {
+class ChangingALayerDefaultBehavior_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

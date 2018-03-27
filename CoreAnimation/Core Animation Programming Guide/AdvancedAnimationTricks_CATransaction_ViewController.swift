@@ -1,5 +1,5 @@
 //
-//  AdvancedAnimationTricks_CATransactionViewController.swift
+//  AdvancedAnimationTricks_CATransaction_ViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/21.
@@ -41,7 +41,7 @@
 
 import UIKit
 
-class AdvancedAnimationTricks_CATransactionViewController: UIViewController {
+class AdvancedAnimationTricks_CATransaction_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

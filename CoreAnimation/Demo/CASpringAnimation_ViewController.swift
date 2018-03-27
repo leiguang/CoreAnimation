@@ -1,5 +1,5 @@
 //
-//  CASpringAnimationViewController.swift
+//  CASpringAnimation_ViewController.swift
 //  CoreAnimation
 //
 //  Created by 雷广 on 2018/3/26.
@@ -22,7 +22,7 @@
 
 import UIKit
 
-class CASpringAnimationViewController: UIViewController {
+class CASpringAnimation_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
