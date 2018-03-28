@@ -41,14 +41,14 @@ class CAScrollLayer_ViewController: UIViewController {
         layer.contentsScale = scale
    
         // 这里为了添加拖动手势，重写了UIView的layerClass属性，改为CAScrollLayer。 （当然也可以直接把CAScrollLayer添加到带手势的UIView的layer上）
-        let scrollView = ScrollView(frame: CGRect(x: 0, y: 200, width: 250, height: 250))
+        let scrollView = MyScrollView(frame: CGRect(x: 0, y: 200, width: 250, height: 250))
         scrollView.backgroundColor = UIColor.cyan
         scrollView.layer.addSublayer(layer)
         view.addSubview(scrollView)
     }
 }
 
-class ScrollView: UIView {
+class MyScrollView: UIView {
     
     override class var layerClass: AnyClass {
         return CAScrollLayer.self

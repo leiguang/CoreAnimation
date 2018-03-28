@@ -82,6 +82,17 @@
  
  */
 
+
+/**
+ 
+ 注意 "func invalidate()" 函数的描述，调用invalidate时，会把display link从所有 run loop modes中移除，导致display link被run loop释放。所以display link也会释放它强引用的target。所以适时地调用invalidate(), 也可以避免循环引用。
+ Description:
+    Removes the display link from all run loop modes.
+    Removing the display link from all run loop modes causes it to be released by the run loop. The display link also releases the target.
+    invalidate() is thread safe meaning that it can be called from a thread separate to the one in which the display link is running.
+ 
+ */
+
 import UIKit
 
 class CADisplayLink_ViewController: UIViewController {
@@ -105,19 +116,21 @@ class CADisplayLink_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 注意：这3个demo都应使用TargetProxy对象来避免循环引用，这里只在demo1中做了一个示例
+        
         // 通过中间对象TargetProxy 并在deinit中调用displayLink.invalidate() 来避免循环引用
-        createDisplayLink()
+        demo1()
         
         // 通过iOS 10以后的方法计算帧率
-//        createDisplayLink2()
+//        demo2()
         
-        // 找出计算耗时 超过屏幕下次刷新时刻 的i值
-//        createDisplayLink3()
+        // 找出计算的耗时 超过屏幕下次刷新时刻 的i值
+//        demo3()
     }
 
     
-    // MARK: - Creating a display link
-    func createDisplayLink() {
+    // MARK: - demo1 - Creating a display link
+    func demo1() {
         displaylink = CADisplayLink(target: TargetProxy(target: self) , selector: #selector(TargetProxy.onTick))
         displaylink?.add(to: .current, forMode: .defaultRunLoopMode)
     }
@@ -128,13 +141,14 @@ class CADisplayLink_ViewController: UIViewController {
     
     deinit {
         displaylink?.invalidate()
+        print("\(self) \(#function)")
     }
     
     
     
     
-    // MARK: - calculating actual frame rate
-    func createDisplayLink2() {
+    // MARK: - demo2 - calculating actual frame rate
+    func demo2() {
         let displaylink = CADisplayLink(target: self, selector: #selector(calculateActualFrameRate))
         displaylink.add(to: .current, forMode: .defaultRunLoopMode)
     }
@@ -153,9 +167,9 @@ class CADisplayLink_ViewController: UIViewController {
     
     
     
-    // MARK: - 找出计算耗时 超过屏幕下次刷新时刻 的i值
+    // MARK: - demo3 - 找出计算耗时 超过屏幕下次刷新时刻 的i值
     // The following code shows how you can create a display link and register it with a run loop. The step(displayLink:) function attempts to sum the square roots of all numbers up to max, but with each iteration checks the current time (CACurrentMediaTime()) against the targetTimestamp. If the time taken to complete the calculation is later than the target timestamp, the function breaks the loop:
-    func createDisplayLink3() {
+    func demo3() {
         let displayLink = CADisplayLink(target: self, selector: #selector(step3))
         displayLink.add(to: .main, forMode: .defaultRunLoopMode)
     }

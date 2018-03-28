@@ -30,6 +30,7 @@
 		9A71719C2069398D004D9269 /* CASpringAnimation_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71719B2069398D004D9269 /* CASpringAnimation_ViewController.swift */; };
 		9A9C16E82068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */; };
 		9A9FE6FF206A43EA0026B682 /* CATiledLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */; };
+		9A9FE701206B756B0026B682 /* CAReplicatorLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */; };
 		9AB8AAEA206A94CB00678869 /* CATransformLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		9A71719B2069398D004D9269 /* CASpringAnimation_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASpringAnimation_ViewController.swift; sourceTree = "<group>"; };
 		9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTypesAndTimingProgrammingGuide.swift; sourceTree = "<group>"; };
 		9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATiledLayer_ViewController.swift; sourceTree = "<group>"; };
+		9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer_ViewController.swift; sourceTree = "<group>"; };
 		9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransformLayer_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				9A22DCA4206A2EA700BE7FE3 /* CAScrollLayer_ViewController.swift */,
 				9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */,
 				9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */,
+				9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				9A46AB3520648E57002A3041 /* ImprovingAnimationPerformance.swift in Sources */,
 				9A46AB3720649DBA002A3041 /* AppendixA_LayerStylePropertyAnimations.swift in Sources */,
 				9A22DCA5206A2EA700BE7FE3 /* CAScrollLayer_ViewController.swift in Sources */,
+				9A9FE701206B756B0026B682 /* CAReplicatorLayer_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

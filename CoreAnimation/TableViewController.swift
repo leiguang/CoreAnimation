@@ -23,6 +23,7 @@ class TableViewController: UITableViewController {
         ["text": "CAScrollLayer", "className": "CAScrollLayer_ViewController"],
         ["text": "CATiledLayer", "className": "CATiledLayer_ViewController"],
         ["text": "CATransformLayer", "className": "CATransformLayer_ViewController"],
+        ["text": "CAReplicatorLayer", "className": "CAReplicatorLayer_ViewController"],
     ]
     
     override func viewDidLoad() {
@@ -54,7 +55,5 @@ class TableViewController: UITableViewController {
         vc.title = datas[indexPath.row]["text"]
         navigationController?.pushViewController(vc, animated: true)
     }
-
-
 
 }
