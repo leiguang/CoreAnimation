@@ -38,13 +38,16 @@ class CAReplicatorLayer_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        demo1() // 横排渐变
+        demo1() // 横排红色渐变色块
         
-        demo2() // 横排 + 竖排 渐变
+        demo2() // 横排 + 竖排 渐变色块
         
-        demo3() //
+        demo3() // 闪烁的黄色圆
+        
+        demo4() // 转圈的绿色圆
     }
     
+    // 横排红色渐变色块
     func demo1() {
         let instanceCount = 5
         let squareSize = CGSize(width: 50, height: 50)
@@ -80,6 +83,7 @@ class CAReplicatorLayer_ViewController: UIViewController {
         redSquare.add(anim, forKey: nil)
     }
     
+    // 横排 + 竖排 渐变色块
     func demo2() {
         let rowCount = 5
         let colCount = 5
@@ -117,8 +121,61 @@ class CAReplicatorLayer_ViewController: UIViewController {
         view.layer.addSublayer(outerReplicatorLayer)
     }
     
+    // 闪烁的黄色圆
     func demo3() {
+        let count = 20
+        let size = CGSize(width: 10, height: 10)
         
+        let circle = CALayer()
+        circle.frame = CGRect(origin: CGPoint(x: 50, y: 0), size: size)
+        circle.backgroundColor = UIColor.orange.cgColor
+        circle.cornerRadius = size.width / 2
+        
+        let replicatorLayer = CAReplicatorLayer()
+        replicatorLayer.frame = CGRect(x: 100, y: 600, width: size.width, height: size.height)
+//        replicatorLayer.backgroundColor = UIColor.red.cgColor // 解除注释来观察原点效果
+        replicatorLayer.addSublayer(circle)
+        view.layer.addSublayer(replicatorLayer)
+        
+        // 添加动画
+        let anim = CABasicAnimation(keyPath: "opacity")
+        anim.fromValue = 1
+        anim.toValue = 0
+        anim.duration = 1
+        anim.repeatCount = Float.greatestFiniteMagnitude
+        circle.add(anim, forKey: nil)
+        
+        replicatorLayer.instanceCount = count
+        replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat.pi * 2 / CGFloat(count), 0, 0, 1)
     }
     
+    // 转圈的绿色圆
+    // 只在demo3中添加了最后一句代码，设置每个复制layer的动画延迟时间"replicatorLayer.instanceDelay = ..."
+    func demo4() {
+        let count = 20
+        let size = CGSize(width: 10, height: 10)
+        
+        let circle = CALayer()
+        circle.frame = CGRect(origin: CGPoint(x: 50, y: 0), size: size)
+        circle.backgroundColor = UIColor.green.cgColor
+        circle.cornerRadius = size.width / 2
+        
+        let replicatorLayer = CAReplicatorLayer()
+        replicatorLayer.frame = CGRect(x: 250, y: 600, width: size.width, height: size.height)
+//        replicatorLayer.backgroundColor = UIColor.red.cgColor // 解除注释来观察原点效果
+        replicatorLayer.addSublayer(circle)
+        view.layer.addSublayer(replicatorLayer)
+        
+        // 添加动画
+        let anim = CABasicAnimation(keyPath: "opacity")
+        anim.fromValue = 1
+        anim.toValue = 0
+        anim.duration = 1
+        anim.repeatCount = Float.greatestFiniteMagnitude
+        circle.add(anim, forKey: nil)
+        
+        replicatorLayer.instanceCount = count
+        replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat.pi * 2 / CGFloat(count), 0, 0, 1)
+        replicatorLayer.instanceDelay = anim.duration / CFTimeInterval(count)
+    }
 }

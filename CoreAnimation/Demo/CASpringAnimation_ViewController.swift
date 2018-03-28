@@ -33,7 +33,7 @@ class CASpringAnimation_ViewController: UIViewController {
     
     func demo() {
         let layer = CALayer()
-        layer.frame = CGRect(x: 200, y: 200, width: 100, height: 100)
+        layer.frame = CGRect(x: 100, y: 200, width: 100, height: 100)
         layer.backgroundColor = UIColor.red.cgColor
         view.layer.addSublayer(layer)
 
