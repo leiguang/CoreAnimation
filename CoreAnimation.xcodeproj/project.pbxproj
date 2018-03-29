@@ -31,6 +31,7 @@
 		9A9C16E82068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */; };
 		9A9FE6FF206A43EA0026B682 /* CATiledLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */; };
 		9A9FE701206B756B0026B682 /* CAReplicatorLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */; };
+		9A9FE703206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */; };
 		9AB8AAEA206A94CB00678869 /* CATransformLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTypesAndTimingProgrammingGuide.swift; sourceTree = "<group>"; };
 		9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATiledLayer_ViewController.swift; sourceTree = "<group>"; };
 		9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer_ViewController.swift; sourceTree = "<group>"; };
+		9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer2_ViewController.swift; sourceTree = "<group>"; };
 		9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransformLayer_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */,
 				9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */,
 				9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */,
+				9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9FE703206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift in Sources */,
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */,
 				9A71719C2069398D004D9269 /* CASpringAnimation_ViewController.swift in Sources */,

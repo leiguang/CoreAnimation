@@ -8,9 +8,15 @@
 
 // MARK: - [CAEmitterLayer] 粒子系统
 
-// 详细使用可参考文章[CAEmitterLayer精解](https://www.jianshu.com/p/197c2257f597)
-// 该文章详细讲解了CAEmitterLayer中 发射形状、方向、速度、大小、颜色变化、旋转、时间等的使用。
-//  (该文章转为长图片(http://cwb.assets.jianshu.io/notes/images/4212093/weibo/image_496727cde296.jpg))
+
+/**
+
+ 具体使用可参考文章[CAEmitterLayer精解](https://www.jianshu.com/p/197c2257f597)
+ 该文章十分详细地讲解了CAEmitterLayer中 发射形状、方向、速度、大小、颜色变化、旋转、时间等的使用。
+ (该文章转为长图片(http://cwb.assets.jianshu.io/notes/images/4212093/weibo/image_496727cde296.jpg))
+
+ */
+
 
 import UIKit
 

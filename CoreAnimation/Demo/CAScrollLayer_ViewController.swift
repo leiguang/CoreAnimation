@@ -18,9 +18,11 @@
  */
 
 /**
+ 
  有”scrollMode“属性：kCAScrollNone、kCAScrollVertically、kCAScrollHorizontally、kCAScrollBoth。默认值为kCAScrollBoth。
  方法“func scroll(to p: CGPoint)”、“func scroll(to r: CGRect)”受到此属性控制，例如设置只能水平滚动后，调用scroll方法不会在竖直方向上有偏移，只会水平移动。
-*/
+ 
+ */
 
 import UIKit
 
@@ -41,7 +43,7 @@ class CAScrollLayer_ViewController: UIViewController {
         layer.contentsScale = scale
    
         // 这里为了添加拖动手势，重写了UIView的layerClass属性，改为CAScrollLayer。 （当然也可以直接把CAScrollLayer添加到带手势的UIView的layer上）
-        let scrollView = MyScrollView(frame: CGRect(x: 0, y: 200, width: 250, height: 250))
+        let scrollView = MyScrollView(frame: CGRect(x: 50, y: 200, width: 250, height: 250))
         scrollView.backgroundColor = UIColor.cyan
         scrollView.layer.addSublayer(layer)
         view.addSubview(scrollView)

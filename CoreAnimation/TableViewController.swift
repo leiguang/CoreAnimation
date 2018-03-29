@@ -24,6 +24,7 @@ class TableViewController: UITableViewController {
         ["text": "CATiledLayer", "className": "CATiledLayer_ViewController"],
         ["text": "CATransformLayer", "className": "CATransformLayer_ViewController"],
         ["text": "CAReplicatorLayer", "className": "CAReplicatorLayer_ViewController"],
+        ["text": "CAReplicatorLayer 2", "className": "CAReplicatorLayer2_ViewController"],
     ]
     
     override func viewDidLoad() {
