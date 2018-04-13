@@ -10,22 +10,24 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    let datas =  [
-        ["text": "Animating Layer Content", "className": "AnimatingLayerContent_ViewController"],
-        ["text": "Advanced Animation Tricks CATransition", "className": "AdvancedAnimationTricks_CATransition_ViewController"],
-        ["text": "Advanced Animation Tricks CAMediaTiming", "className": "AdvancedAnimationTricks_CAMediaTiming_ViewController"],
-        ["text": "Advanced Animation Tricks CATransaction", "className": "AdvancedAnimationTricks_CATransaction_ViewController"],
-        ["text": "Changing a Layer's Default Behavior", "className": "ChangingALayerDefaultBehavior_ViewController"],
-        ["text": "CAShapeLayer", "className": "CAShapeLayer_ViewController"],
-        ["text": "CASpringAnimation", "className": "CASpringAnimation_ViewController"],
-        ["text": "CADisplayLink", "className": "CADisplayLink_ViewController"],
-        ["text": "CAEmitterLayer", "className": "CAEmitterLayer_ViewController"],
-        ["text": "CAScrollLayer", "className": "CAScrollLayer_ViewController"],
-        ["text": "CATiledLayer", "className": "CATiledLayer_ViewController"],
-        ["text": "CATransformLayer", "className": "CATransformLayer_ViewController"],
-        ["text": "CAReplicatorLayer", "className": "CAReplicatorLayer_ViewController"],
-        ["text": "CAReplicatorLayer 2", "className": "CAReplicatorLayer2_ViewController"],
-    ]
+    let datas: [(title: String, className: String)] = [
+        ("Animating Layer Content", "AnimatingLayerContent_ViewController"),
+        ("Advanced Animation Tricks CATransition", "AdvancedAnimationTricks_CATransition_ViewController"),
+        ("Advanced Animation Tricks CAMediaTiming", "AdvancedAnimationTricks_CAMediaTiming_ViewController"),
+        ("Advanced Animation Tricks CATransaction", "AdvancedAnimationTricks_CATransaction_ViewController"),
+        ("Changing a Layer's Default Behavior", "ChangingALayerDefaultBehavior_ViewController"),
+        ("CAShapeLayer", "CAShapeLayer_ViewController"),
+        ("CASpringAnimation", "CASpringAnimation_ViewController"),
+        ("CADisplayLink", "CADisplayLink_ViewController"),
+        ("CAEmitterLayer", "CAEmitterLayer_ViewController"),
+        ("CAScrollLayer", "CAScrollLayer_ViewController"),
+        ("CATiledLayer", "CATiledLayer_ViewController"),
+        ("CATransformLayer", "CATransformLayer_ViewController"),
+        ("CAReplicatorLayer", "CAReplicatorLayer_ViewController"),
+        ("CAReplicatorLayer 2", "CAReplicatorLayer2_ViewController"),
+        ("CAReplicatorLayer 3", "CAReplicatorLayer3_ViewController"),
+        ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        cell.textLabel?.text = datas[indexPath.row]["text"]
+        cell.textLabel?.text = datas[indexPath.row].title
         cell.accessoryType = .disclosureIndicator
         return cell
     }
@@ -50,10 +52,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 在Swift中，由字符串转为类型的时候，如果类型是自定义的，需要在类型字符串前边加上你的项目的名字！
         let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
-        let vcClass = NSClassFromString(appName + "." + datas[indexPath.row]["className"]!) as! UIViewController.Type
+        let vcClass = NSClassFromString(appName + "." + datas[indexPath.row].className) as! UIViewController.Type
         let vc = vcClass.init()
         vc.view.backgroundColor = .white
-        vc.title = datas[indexPath.row]["text"]
+        vc.title = datas[indexPath.row].title
         navigationController?.pushViewController(vc, animated: true)
     }
 

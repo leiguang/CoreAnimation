@@ -25,7 +25,9 @@ class CAReplicatorLayer2_ViewController: UIViewController {
         
         demo5() // 音量震动条
         
-        demo6() // 跑马灯
+        demo6() // 从左到右缩放的动画
+        
+        demo7() // 跑马灯
     }
     
     // MARK: - 两个绿色方块，先平移，再旋转30° (观察instanceTransform效果)
@@ -130,7 +132,7 @@ class CAReplicatorLayer2_ViewController: UIViewController {
         
         let layer = CALayer()
         layer.bounds = CGRect(origin: .zero, size: size)
-        layer.anchorPoint = CGPoint(x: 0.5, y: 1)   // 由于要保持layer底部不变，纵向朝上伸缩layer的高度，需要修改layer的锚点为(x: 0.5, y: 1), 这是position为 .zero
+        layer.anchorPoint = CGPoint(x: 0.5, y: 1)   // 由于要保持layer底部不变，纵向朝上伸缩layer的高度，需要修改layer的锚点为(x: 0.5, y: 1), 这时position为 .zero
         layer.position = .zero
         layer.backgroundColor = UIColor.red.cgColor
         
@@ -152,8 +154,36 @@ class CAReplicatorLayer2_ViewController: UIViewController {
         layer.add(anim, forKey: nil)
     }
     
-    // MARK: - 跑马灯
+    // MARK: - 从左到右缩放的动画
     func demo6() {
+        let size = CGSize(width: 15, height: 15)
+        let count = 10
+        let duration: Double = 1
+
+        let layer = CALayer()
+        layer.frame = CGRect(origin: .zero, size: size)
+        layer.backgroundColor = UIColor.cyan.cgColor
+
+        let replicatorLayer = CAReplicatorLayer()
+        replicatorLayer.frame = CGRect(x: 30, y: 600, width: size.width, height: size.height)
+//        replicatorLayer.backgroundColor = UIColor.red.cgColor
+        replicatorLayer.instanceCount = count
+        replicatorLayer.instanceDelay = duration / Double(count)
+        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(size.width * 2, 0, 0)
+        replicatorLayer.addSublayer(layer)
+        view.layer.addSublayer(replicatorLayer)
+
+        // 缩放动画
+        let anim = CABasicAnimation(keyPath: "transform")
+        anim.fromValue = CATransform3DIdentity
+        anim.toValue = CATransform3DMakeScale(0.1, 0.1, 1)
+        anim.duration = duration
+        anim.repeatCount = Float.greatestFiniteMagnitude
+        layer.add(anim, forKey: nil)
+    }
+    
+    // MARK: - 跑马灯
+    func demo7() {
         let size = CGSize(width: 520, height: 44)
         let duration: Double = 8
         
@@ -166,7 +196,7 @@ class CAReplicatorLayer2_ViewController: UIViewController {
         layer.alignmentMode = kCAAlignmentJustified
         
         let replicatorLayer = CAReplicatorLayer()
-        replicatorLayer.frame = CGRect(x: 30, y: 600, width: 300, height: size.height)
+        replicatorLayer.frame = CGRect(x: 30, y: 660, width: 300, height: size.height)
         replicatorLayer.masksToBounds = true
         replicatorLayer.instanceCount = 2
         replicatorLayer.instanceTransform = CATransform3DMakeTranslation(size.width, 0, 0)

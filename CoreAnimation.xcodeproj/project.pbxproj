@@ -28,6 +28,7 @@
 		9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */; };
 		9A46AB3F2064FB70002A3041 /* CAShapeLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46AB3E2064FB70002A3041 /* CAShapeLayer_ViewController.swift */; };
 		9A71719C2069398D004D9269 /* CASpringAnimation_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71719B2069398D004D9269 /* CASpringAnimation_ViewController.swift */; };
+		9A9797222080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9797212080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift */; };
 		9A9C16E82068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */; };
 		9A9FE6FF206A43EA0026B682 /* CATiledLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */; };
 		9A9FE701206B756B0026B682 /* CAReplicatorLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */; };
@@ -59,6 +60,7 @@
 		9A46AB3A2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendixB_AnimatableProperties.swift; sourceTree = "<group>"; };
 		9A46AB3E2064FB70002A3041 /* CAShapeLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayer_ViewController.swift; sourceTree = "<group>"; };
 		9A71719B2069398D004D9269 /* CASpringAnimation_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASpringAnimation_ViewController.swift; sourceTree = "<group>"; };
+		9A9797212080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer3_ViewController.swift; sourceTree = "<group>"; };
 		9A9C16E72068F7BE00B88C09 /* AnimationTypesAndTimingProgrammingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTypesAndTimingProgrammingGuide.swift; sourceTree = "<group>"; };
 		9A9FE6FE206A43EA0026B682 /* CATiledLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATiledLayer_ViewController.swift; sourceTree = "<group>"; };
 		9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer_ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */,
 				9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */,
 				9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */,
+				9A9797212080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				9A9FE703206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift in Sources */,
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */,
+				9A9797222080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift in Sources */,
 				9A71719C2069398D004D9269 /* CASpringAnimation_ViewController.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
 				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricks_CATransaction_ViewController.swift in Sources */,
