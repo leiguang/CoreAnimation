@@ -73,6 +73,7 @@ class AdvancedAnimationTricks_CAMediaTiming_ViewController: UIViewController {
     }
 
     // MARK: - 开始/暂停 动画
+    // 开关按钮
     func startOrStopAnim() {
         // 开关按钮
         let button = UISwitch()
@@ -96,6 +97,7 @@ class AdvancedAnimationTricks_CAMediaTiming_ViewController: UIViewController {
         redLayer.add(anim, forKey: nil)
     }
     
+    // 开始/暂停 动画
     @objc func tapSwitch(_ sender: UISwitch) {
         if sender.isOn {    // 开启动画
             let pausedTime = redLayer.timeOffset

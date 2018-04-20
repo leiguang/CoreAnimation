@@ -9,33 +9,44 @@
 import UIKit
 
 class CAReplicatorLayer3_ViewController: UIViewController {
-
+    
+    let layer = CALayer()
+    let duration: CFTimeInterval = 0.25
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 仿下拉刷新
+
+        layer.frame = CGRect(x: 100, y: 200, width: 36, height: 36)
+        layer.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor
+        view.layer.addSublayer(layer)
         
-        let size = CGSize(width: 10, height: 10)
-        let count = 8
-        let duration: CFTimeInterval = 1
-        
-        let layer = CALayer()
-        layer.frame = CGRect(origin: .zero, size: size)
-        layer.backgroundColor = UIColor.blue.cgColor
-        
-        let replicatorLayer = CAReplicatorLayer()
-        replicatorLayer.backgroundColor = UIColor.red.cgColor
-        replicatorLayer.instanceCount = count
+        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
+        anim.fromValue = 0
+        anim.toValue = Float.pi
+        anim.duration = duration
+        anim.repeatCount = Float.greatestFiniteMagnitude
+        layer.add(anim, forKey: "rotation")
+        // 暂停动画
+        layer.speed = 0
         
         
-        replicatorLayer.instanceDelay = duration / CFTimeInterval(count)
-        
-        let t = CATransform3DMakeTranslation(size.width * 2, 0, 0)
-        replicatorLayer.instanceTransform = CATransform3DRotate(t, CGFloat.pi * 2 / CGFloat(count), 0, 0, 1)
-        replicatorLayer.addSublayer(layer)
-        view.layer.addSublayer(replicatorLayer)
-        
+        // UISlider
+        let slider = UISlider(frame: CGRect(x: 50, y: 400, width: view.bounds.width - 100, height: 30))
+        slider.addTarget(self, action: #selector(tapSlider), for: .valueChanged)
+        view.addSubview(slider)
     }
     
+    @objc func tapSlider(_ sender: UISlider) {
+        if sender.value < 0.6 { // 拖动旋转
+            layer.speed = 0
+            layer.timeOffset = Double(Double(sender.value) / 0.6 * duration)
+            
+        } else {                // 自动旋转
+            layer.speed = 1
+        }
+    }
 }
 
 
