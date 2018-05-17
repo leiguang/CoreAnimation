@@ -63,3 +63,19 @@
  In addition to the layers associated with your views, you can also create layer objects that do not have a corresponding view. You can embed these standalone layer objects inside of any other layer object in your app, including those that are associated with a view. You typically use standalone layer objects as part of a specific optimization path. For example, if you wanted to use the same image in multiple places, you could load the image once and associate it with multiple standalone layer objects and add those objects to the layer tree. Each layer then refers to the source image rather than trying to create its own copy of that image in memory.
  */
 
+
+/**
+ 
+ 因此交互动画首要解决的就是一个很知乎的问题：「如何优雅地中止运行中的动画而不造成画面突变？
+ 」答案是：取消动画时让 modelLayer 的状态与当前 presentationLayer 的状态同步。在手势切入控制板的动画过程后这样做：
+ 
+ let currentPosition = (panelView.layer.presentationLayer() as! CALayer).position
+ panelView.layer.removeAllAnimations()//或者使用 removeAnimationForKey: 取消指定的动画
+ panelView.layer.position = currentPosition
+ 这里有个需要注意的地方，如果你使用 UIView Animation，一定要使用带options的 API，且必须将.AllowUserInteraction作为选项之一，不然在动画运行过程中视图不会响应触摸事件，使用 Core Animation 则不受此影响。
+ 
+ 作者：seedante
+ 链接：https://www.jianshu.com/p/bbbdff8f01c5
+ 來源：简书
+ 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+ */
