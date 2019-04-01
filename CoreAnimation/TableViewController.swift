@@ -26,6 +26,7 @@ class TableViewController: UITableViewController {
         ("CAReplicatorLayer", "CAReplicatorLayer_ViewController"),
         ("CAReplicatorLayer 2", "CAReplicatorLayer2_ViewController"),
         ("CAReplicatorLayer 3", "CAReplicatorLayer3_ViewController"),
+        ("RoundProgressButton", "RoundProgressButton_ViewController"),
         ]
     
     

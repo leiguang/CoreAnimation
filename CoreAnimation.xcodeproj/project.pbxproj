@@ -34,6 +34,8 @@
 		9A9FE701206B756B0026B682 /* CAReplicatorLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */; };
 		9A9FE703206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */; };
 		9AB8AAEA206A94CB00678869 /* CATransformLayer_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */; };
+		B648E01F2251DE93001C68A7 /* RoundProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648E01E2251DE93001C68A7 /* RoundProgressButton.swift */; };
+		B648E0212251FB87001C68A7 /* RoundProgressButton_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648E0202251FB87001C68A7 /* RoundProgressButton_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer_ViewController.swift; sourceTree = "<group>"; };
 		9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer2_ViewController.swift; sourceTree = "<group>"; };
 		9AB8AAE9206A94CB00678869 /* CATransformLayer_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransformLayer_ViewController.swift; sourceTree = "<group>"; };
+		B648E01E2251DE93001C68A7 /* RoundProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundProgressButton.swift; sourceTree = "<group>"; };
+		B648E0202251FB87001C68A7 /* RoundProgressButton_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundProgressButton_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				9A9FE700206B756B0026B682 /* CAReplicatorLayer_ViewController.swift */,
 				9A9FE702206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift */,
 				9A9797212080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift */,
+				B648E0202251FB87001C68A7 /* RoundProgressButton_ViewController.swift */,
+				B648E01E2251DE93001C68A7 /* RoundProgressButton.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -226,10 +232,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9FE703206C7B5F0026B682 /* CAReplicatorLayer2_ViewController.swift in Sources */,
+				B648E01F2251DE93001C68A7 /* RoundProgressButton.swift in Sources */,
 				9A1463F420609A1D00C589FD /* TableViewController.swift in Sources */,
 				9A46AB3B2064ABAF002A3041 /* AppendixB_AnimatableProperties.swift in Sources */,
 				9A9797222080BB90001BA72C /* CAReplicatorLayer3_ViewController.swift in Sources */,
 				9A71719C2069398D004D9269 /* CASpringAnimation_ViewController.swift in Sources */,
+				B648E0212251FB87001C68A7 /* RoundProgressButton_ViewController.swift in Sources */,
 				9A1463EC205F4DDE00C589FD /* Introduction.swift in Sources */,
 				9A46AAF9206260AE002A3041 /* AdvancedAnimationTricks_CATransaction_ViewController.swift in Sources */,
 				9A22DCA12069D6F900BE7FE3 /* CADisplayLink_ViewController.swift in Sources */,
